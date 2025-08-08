@@ -27,7 +27,7 @@ jobs:
           mkdir temp-deploy
           cp -R dist/* temp-deploy/
           git checkout --orphan build
-          git rm -rf
+          git rm -rf .
           cp -R temp-deploy/* .
           git add .
           git commit -m "Production build"
