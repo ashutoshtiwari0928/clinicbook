@@ -34,5 +34,5 @@ jobs:
           git add .
           git commit -m "Production build"
           git push origin build --force
-          rmdir dist
-          rmdir temp-deploy
+          rm -r dist
+          rm -r temp-deploy
