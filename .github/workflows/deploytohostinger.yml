@@ -29,7 +29,12 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          # create a temp folder and move build there
+          mkdir temp-deploy
+          cp -R build/* temp-deploy/
           git checkout --orphan build
-          git --work-tree=build add --all
-          git --work-tree=build commit -m "Production build"
-          git push origin HEAD:build --force
+          git rm -rf
+          cp -R temp-deploy/* .
+          git add .
+          git commit -m "Production build"
+          git push origin build --force
