@@ -25,7 +25,7 @@ jobs:
           git config user.email "github-actions@github.com"
           # create a temp folder and move build there
           mkdir temp-deploy
-          cp -R build/* temp-deploy/
+          cp -R dist/* temp-deploy/
           git checkout --orphan build
           git rm -rf
           cp -R temp-deploy/* .
