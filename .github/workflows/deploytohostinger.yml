@@ -25,9 +25,6 @@ jobs:
       - name: Clear this branch make it empty for prodution
         run: git rm -rf .
 
-      - name: Created a build branch
-        run: git commit --allow-empty -m "Initial build branch"
-
       - name: Push
         uses: s0/git-publish-subdir-action@develop
         env:
