@@ -24,3 +24,12 @@ jobs:
 
       - name: Clear this branch make it empty for prodution
         run: git rm -rf .
+
+      - name: Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git checkout --orphan build
+          git --work-tree=build add --all
+          git --work-tree=build commit -m "Production build"
+          git push origin HEAD:build --force
