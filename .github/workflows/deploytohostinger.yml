@@ -31,8 +31,8 @@ jobs:
           git checkout --orphan build
           git rm -rf .
           cp -R temp-deploy/* .
+          rm -r dist
+          rm -r temp-deploy
           git add .
           git commit -m "Production build"
           git push origin build --force
-          rm -r dist
-          rm -r temp-deploy
