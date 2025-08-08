@@ -10,6 +10,7 @@ function App() {
     <>
       <div>
         <h1>Testing production</h1>
+        <h2>Hello world</h2>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
