@@ -19,12 +19,6 @@ jobs:
       - name: Build
         run: npm run build # The build command of your project
 
-      - name: Building a branch
-        run: git checkout --orphan build
-
-      - name: Clear this branch make it empty for prodution
-        run: git rm -rf .
-
       - name: Push
         run: |
           git config user.name "github-actions"
